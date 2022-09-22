@@ -13,24 +13,23 @@ const TextSubmitComp = () => {
 
   async function textSubmit () {
     const textData = {    
-      textSubmitted: refs.textRef.current.value, // text to submit
+      text: refs.textRef.current.value, // text submitted
     } 
     
     http.post(textData, "submit-text")
       .then((res) => {
-        setMessage({success: res.success, message: res.message});
+        // setMessage({success: res.success, message: res.message}); 
         if (res.success) {
-          console.log("res:",res);
-          console.log("res.id:",res.id);
-          const id = res.id;
-          setMessage(null);
+          console.log("res.message:",res.message);
+          console.log("res.gif:",res.gif);
+          setMessage(res.message);
         //   nav(`/text/${id}/${refs.textRef.current.value}`)
         }
       })
   };
 
   return (
-    <div className={`${styles.d_flex} ${styles.column}`}> {/* old className="EnterTextComp" */}
+    <div className={styles.text_submit_comp}> {/* old className="EnterTextComp" */}
   
       <div className={`${styles.text_submit_div} ${styles.d_flex} ${styles.column} ${styles.a_center}`}> {/* old className="enter-text-div" */}
 
