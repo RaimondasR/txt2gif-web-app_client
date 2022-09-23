@@ -29,26 +29,26 @@ const TextSubmitComp = () => {
   };
 
   return (
-    <div className={styles.text_submit_comp}> {/* old className="EnterTextComp" */}
+    <div className={styles.text_submit_comp}>
   
-      <div className={`${styles.text_submit_div} ${styles.d_flex} ${styles.column} ${styles.a_center}`}> {/* old className="enter-text-div" */}
+      <div className={styles.text_submit_div}>
 
-        <div className={`${styles.txt_div} ${styles.d_flex} ${styles.a_center} ${styles.fs20}`}><b>IBM Watson Natural Language Service</b></div> {/* old className="sign-div" */}
-        <div className={`${styles.txt_div} ${styles.d_flex} ${styles.a_center} ${styles.fs20}`}><b>Text Submit Form</b></div> {/* old className="sign-div" */}
+        <div className={styles.txt_div1}><b>IBM WATSON NATURAL LANGUAGE SERVICE</b></div>
+        <div className={styles.txt_div1}><b>Text Submit Form</b></div>
                     
-        <div className={`${styles.txt_div} ${styles.d_flex} ${styles.a_flex_end} ${styles.mt10} ${styles.mb0} ${styles.fs14}`}> {/* old className="sign-div" */}
-          <div className={`${styles.c_gray} ${styles.mr5}`}><b>Your Text</b></div>
-          <div className={`${styles.c_red} ${styles.fs11} ${styles.mb2}`}><b>REQUIRED</b></div>              
+        <div className={styles.txt_div2}>
+          <div className={styles.txt_div3}><b>Your Text</b></div>
+          <div className={styles.txt_div4}><b>REQUIRED</b></div>              
         </div>
 
-        <textarea className={styles.txt_inp} ref={refs.textRef} placeholder="Type or copy-paste your text here..."> {/* old className="msg-inp" */}        
+        <textarea ref={refs.textRef} placeholder="Type or copy-paste your text here..." >      
         </textarea>
                   
-        <div className={`${styles.txt_div} ${styles.d_flex} ${styles.center} ${styles.mt30}`}> {/* old className="sign-div" */}
+        <div className={styles.txt_div5}>
           <button onClick={textSubmit}>Submit Text</button>
         </div>
 
-        {message && <div className={`${styles.txt_inp} ${styles.d_flex} ${styles.center} ${styles.mt15}`}>{message.message}</div>}  
+        {message && <div className={styles.msg_div}>{message.message}</div>}  
       </div>
     </div>
   );
