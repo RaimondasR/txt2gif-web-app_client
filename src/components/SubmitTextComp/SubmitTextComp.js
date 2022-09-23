@@ -1,9 +1,9 @@
 import React, { useRef, useState } from 'react';
 import http from '../../plugins/http';
 import { useNavigate } from "react-router-dom";
-import styles from './TextSubmitComp.module.css';
+import styles from './SubmitTextComp.module.css';
 
-const TextSubmitComp = () => {
+const SubmitTextComp = () => {
   const nav = useNavigate();
   const [message, setMessage] = useState(null);
 
@@ -54,4 +54,4 @@ const TextSubmitComp = () => {
   );
 };
 
-export default TextSubmitComp;
+export default SubmitTextComp;

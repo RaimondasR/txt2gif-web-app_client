@@ -1,6 +1,7 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import TextSubmitPage from "./pages/TextSubmitPage";
+import SubmitTextPage from "./pages/SubmitTextPage";
+import DisplayGifPage from "./pages/DisplayGifPage";
 import HeaderComp from "./components/HeaderComp/HeaderComp";
 import NavbarComp from "./components/NavbarComp/NavbarComp";
 
@@ -10,11 +11,10 @@ function App() {
       <BrowserRouter>
         <HeaderComp />
         <NavbarComp />
-        <TextSubmitPage />
-
-        {/* <Routes>    
-          <Route path='/submit-text'   element={<TextSubmitPage />} /> {/* TextSubmitPage for entering text */}
-        {/* </Routes> */}
+        <Routes>    
+          <Route path='/submit-text'   element={<SubmitTextPage />} /> {/* for submitting text to get GIF image*/}
+          <Route path='/display-gif'   element={<DisplayGifPage />} /> {/* for displaying GIF image corresponding to submitted text */}
+        </Routes>
       </BrowserRouter>
     </div>
   );

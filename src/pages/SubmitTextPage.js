@@ -1,5 +1,5 @@
 import React from 'react';
-import TextSubmitComp from '../components/TextSubmitComp/TextSubmitComp';
+import TextSubmitComp from '../components/SubmitTextComp/SubmitTextComp';
 
 const TextSubmitPage = () => {
   return (
