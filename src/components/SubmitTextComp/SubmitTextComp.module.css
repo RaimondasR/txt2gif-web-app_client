@@ -1,45 +1,50 @@
-.text_submit_comp {
+.comp {
   display: flex;
   flex-direction: column;
+  border: 2px solid blue;
 }
 
-.text_submit_div {
+.div_wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 100%;
-  /* background-color: whitesmoke; */
   box-shadow: 0 4px lightseagreen;
-  opacity: 1.0;
-  padding: 50px;
+  padding-top: 5px;
+  padding-bottom: 25px;
 }
 
-.txt_div1 {
+.page_name_div {
+  display: flex;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: dodgerblue
+}
+
+.div1 {
+  display: flex;
   width: 50%;
   height: 30px;
-  display: flex;
   align-items: center;
-  font-size: 26px;
-  -webkit-text-fill-color: white;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: black;
+  font-size: 18px;
+  color: gray;
 }
 
-.txt_div2 {
+.div2 {
   width: 50%;
   height: 30px;
   display: flex;
   align-items: flex-end;
-  margin-top: 10px;
   margin-bottom: 0;
 }
 
-.txt_div3 {
+.div3 {
   color: gray;
   margin-right: 5px;
 }
 
-.txt_div4 {
+.div4 {
   color: rgba(121, 18, 65, 0.877);
   font-size: 11px;
   margin-bottom: 2px;
@@ -47,7 +52,7 @@
 
 textarea {
   font-size: 16px;
-  border: none;
+  border: 2px solid lightblue;
   border-bottom: 2px solid gray;
   border-radius: 3px;
   width: 50%;
@@ -59,7 +64,7 @@ textarea:focus {
   background-color: lightcyan;
 }
 
-.txt_div5 {
+.btn_div {
   width: 50%;
   height: 30px;
   display: flex;

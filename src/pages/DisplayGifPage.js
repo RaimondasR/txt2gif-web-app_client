@@ -1,12 +1,12 @@
-import React from 'react';
-import DisplayGifComp from '../components/DisplayGifComp/DisplayGifComp';
+import React from "react";
+import DisplayGifComp from "../components/DisplayGifComp/DisplayGifComp";
 
 const DisplayGifPage = () => {
   return (
     <div className="display_gif_page">
-        <DisplayGifComp />
+      <DisplayGifComp />
     </div>
-  )
+  );
 };
 
 export default DisplayGifPage;

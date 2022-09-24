@@ -5,10 +5,10 @@ const HeaderComp = () => {
   return (
     <div className={styles.header_comp}>
       <div className={styles.div_wrap}>
-        <div className={styles.fs26}>
+        <div className={styles.fs20}>
           <b>Text to GIF Web Application</b>
         </div>
-        <div className={styles.fs18_ml50_mb3}>
+        <div className={styles.fs16_ml50_mb3}>
           <b>text2gif-web-app</b>
         </div>
       </div>

@@ -4,7 +4,7 @@
     align-items: center;
     padding: 5px;
     width: 100%;
-    background-color:lightsteelblue;
+    background-color:lightskyblue;
     box-shadow: 0 4px lightseagreen;
     font-size: 20px;
   }
@@ -17,12 +17,12 @@
   align-items: flex-end;
 }
 
-.fs26 {  
+.fs20 {  
   font-size: 26px;
 }
 
-.fs18_ml50_mb3 {
-  font-size: 18px;
+.fs16_ml50_mb3 {
+  font-size: 16px;
   margin-left: 50px;
   margin-bottom: 3px;
 }

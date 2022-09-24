@@ -1,12 +1,12 @@
-import React from 'react';
-import TextSubmitComp from '../components/SubmitTextComp/SubmitTextComp';
+import React from "react";
+import SubmitTextComp from "../components/SubmitTextComp/SubmitTextComp";
 
-const TextSubmitPage = () => {
+const SubmitTextPage = () => {
   return (
-    <div className="TextSubmitPage">  {/* old className="EnterTextPage" */}
-        <TextSubmitComp />
+    <div className="submit_text_page">
+      <SubmitTextComp />
     </div>
-  )
+  );
 };
 
-export default TextSubmitPage;
+export default SubmitTextPage;

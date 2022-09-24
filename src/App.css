@@ -5,14 +5,14 @@
   text-align: center;
   background-color: lightsteelblue;
   min-height: 2000px;
-  padding: 20px 0;
-  background-image: url("./img/img_giphy_logo.png");
+  background-image: url("./img/img_giphy_logo2.png");
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center 15px;
   background-size: cover;
 }
 
-.TextSubmitPage {  min-width: 100%; }
+.submit_text_page {  min-width: 100%; }
+.display_gif_page {  min-width: 100%; }
 
 /* COLORS */
 .bg_light { background-color: rgb(241, 235, 236); }
