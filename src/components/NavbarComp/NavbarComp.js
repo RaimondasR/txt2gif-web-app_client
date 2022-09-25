@@ -7,8 +7,12 @@ const NavbarComp = () => {
 
   return (
     <div className={styles.navbar_comp}>
-      <Link to="/submit-text">Submit Text to get GIF</Link>
-      <Link to="/display-gif">Produced GIF Images</Link>
+      {location.pathname !== "/submit-text" && (
+        <Link to="/submit-text">Submit Text to get GIF</Link>
+      )}
+      {location.pathname !== "/produce-gif" && (
+        <Link to="/produce-gif">Produced GIF Images</Link>
+      )}
     </div>
   );
 };

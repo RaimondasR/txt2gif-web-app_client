@@ -56,6 +56,9 @@ const SubmitTextComp = () => {
         </div>
 
         {message && <div className={styles.msg_div}>{message.message}</div>}
+        
+        <div className={styles.giphy_div} />
+        
       </div>
     </div>
   );

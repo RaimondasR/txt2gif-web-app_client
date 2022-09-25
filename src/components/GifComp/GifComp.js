@@ -1,8 +1,8 @@
 import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import styles from "./DisplayGifComp.module.css";
+import styles from "./GifComp.module.css";
 
-const DisplayGifComp = () => {
+const GifComp = () => {
   const nav = useNavigate();
   const [message, setMessage] = useState(null);
 
@@ -47,4 +47,4 @@ const DisplayGifComp = () => {
   );
 };
 
-export default DisplayGifComp;
+export default GifComp;

@@ -73,14 +73,6 @@ textarea:focus {
   margin-top: 30px;
 }
 
-.msg_div {
-  display: flex;
-  justify-content: center;
-  width: 50%;
-  height: 150px;
-  margin-top: 15px;
-}
-
 button {
   width: 100%;
   background-color: rgb(89, 210, 231);
@@ -97,4 +89,23 @@ button {
 button:hover {
   transform: scale(1.05);
   cursor: pointer;
+}
+
+.msg_div {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  height: 30px;
+  margin-top: 15px;
+}
+
+.giphy_div {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  height: 125px;
+  background-image: url("../../img/img_GIPHY_animated.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 30px;
 }
