@@ -1,10 +1,18 @@
 import React, { useRef, useState } from "react";
+import { useEffect } from "react";
 import http from "../../plugins/http";
 import { useNavigate } from "react-router-dom";
 import styles from "./SubmitTextComp.module.css";
 
 const SubmitTextComp = () => {
+  useEffect(() => {
+    if (!localStorage.hasOwnProperty("gifs")) {
+      localStorage.setItem("gifs", JSON.stringify([]));
+    }
+  }, []);
+
   const nav = useNavigate();
+  const [generating, setGenerating] = useState(false);
   const [message, setMessage] = useState(null);
 
   const refs = {
@@ -12,17 +20,28 @@ const SubmitTextComp = () => {
   };
 
   async function submitText() {
+    setGenerating(true);
     const textData = {
-      text: refs.textRef.current.value, // text submitted
+      submittedText: refs.textRef.current.value, 
     };
 
-    http.post(textData, "submit-text").then((res) => {
-      // setMessage({success: res.success, message: res.message});
+    http.post(textData, "produce-gif").then((res) => {
       if (res.success) {
-        console.log("res.message:", res.message);
-        console.log("res.gif:", res.gif);
+        setGenerating(false);
+        const gifs = JSON.parse(localStorage.getItem("gifs"));
+        const textAndGif = {
+          gifUrl: res.gifUrl,
+          text: res.text,
+        };
+        gifs.unshift(textAndGif);
+        if (gifs.length > 5) {
+          for (let i = 0; i < gifs.length; i++) {
+            if (gifs.length > 5) gifs.pop();
+          }
+        }
+        localStorage.setItem("gifs", JSON.stringify(gifs));
         setMessage(res.message);
-        //   nav(`/text/${id}/${refs.textRef.current.value}`)
+        nav(`/produce-gif`);
       }
     });
   }
@@ -51,14 +70,17 @@ const SubmitTextComp = () => {
           placeholder="Type or copy-paste your text here..."
         ></textarea>
 
-        <div className={styles.btn_div}>
-          <button onClick={submitText}>Submit Text</button>
-        </div>
+        {generating ? (
+          <div className={styles.btn_div}>Generating GIF ...</div>
+        ) : (
+          <div className={styles.btn_div}>
+            <button onClick={submitText}>Submit Text</button>
+          </div>
+        )}
 
         {message && <div className={styles.msg_div}>{message.message}</div>}
-        
+
         <div className={styles.giphy_div} />
-        
       </div>
     </div>
   );

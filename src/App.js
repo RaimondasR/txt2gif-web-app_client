@@ -13,7 +13,7 @@ function App() {
         <NavbarComp />
         <Routes>    
           <Route path='/'            element={<SubmitTextPage />} /> {/* for submitting text to get GIF image */}
-          <Route path='/submit-text' element={<SubmitTextPage />} /> {/* for submitting text to get GIF image */}
+          {/* <Route path='/submit-text' element={<SubmitTextPage />} /> for submitting text to get GIF image */}
           <Route path='/produce-gif' element={<GifPage />} /> {/* for displaying GIF image corresponding to submitted text */}
         </Routes>
       </BrowserRouter>
